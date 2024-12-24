@@ -1,0 +1,98 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  section {
+    height: 100vh;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+    animation: fadeIn 2s ease-in-out;
+    flex-direction: column;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  .section1 { background-color: #ffb3ba; } /* Pastel Pink */
+  .section2 { background-color: #b3e0a1; } /* Pastel Green */
+  .section3 { background-color: #a3c6e8; } /* Pastel Blue */
+
+  /* Navigation Styles */
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+  }
+
+  nav.scrolled {
+    background-color: #555;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav ul li {
+    display: inline;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 5px 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+
+  nav ul li a:hover {
+    color: #ff9800;
+    transform: scale(1.1);
+  }
+
+  /* Button Styles */
+  .btn {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  .btn:hover {
+    background-color: #ff9800;
+    transform: scale(1.1);
+  }
+
+  /* Animation for Buttons */
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .btn-bounce {
+    animation: bounce 2s infinite;
+  }
